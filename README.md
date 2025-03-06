@@ -9,7 +9,7 @@
 
 ### Lv 2 경로: `ch2-calculator/calculator/v2` : [GitHub 링크](https://github.com/Tcimel/Study/tree/ch2-calculator/src/calculator/v2)
 
-### Lv 3 경로: `ch2-calculator/calculator/v2` : [GitHub 링크](https://github.com/Tcimel/Study/tree/ch2-calculator/src/calculator/v3)
+### Lv 3 경로: `ch2-calculator/calculator/v3` : [GitHub 링크](https://github.com/Tcimel/Study/tree/ch2-calculator/src/calculator/v3)
   
 ## 📌 Lv 1: 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기
 ### ✅ **기능 요구사항**
