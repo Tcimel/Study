@@ -85,7 +85,7 @@ public class ScheduleRepositoryImpl implements ScheduleRepository {
                 return new ScheduleResponseDto(
                         rs.getLong("id"),
                         rs.getString("title"),
-                        rs.getString("contents"),
+                        rs.getString("content"),
                         rs.getLong("user_id"),
                         rs.getTimestamp("create_date"),
                         rs.getTimestamp("update_date").toLocalDateTime()
@@ -111,7 +111,7 @@ public class ScheduleRepositoryImpl implements ScheduleRepository {
                 return new Schedules(
                         rs.getLong("id"),
                         rs.getString("title"),
-                        rs.getString("contents"),
+                        rs.getString("content"),
                         rs.getLong("user_id"),
                         rs.getTimestamp("create_date"),
                         rs.getTimestamp("update_date").toLocalDateTime()
@@ -121,8 +121,8 @@ public class ScheduleRepositoryImpl implements ScheduleRepository {
     }
 
     @Override
-    public int update(Long id, String name, String content) {
-        return jdbcTemplate.update("update schedules set name = ?, contents = ?, update_date = NOW() where id = ?", name, content, id);
+    public int update(Long id, String content) {
+        return jdbcTemplate.update("update schedules set content = ?, update_date = NOW() where id = ?", content, id);
     }
 
     @Override

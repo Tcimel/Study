@@ -15,6 +15,7 @@ public class Schedules {
     private String title;
     private String content;
     private Long userId;
+//    private String userName;
     //private Users user;
     private Date create_date; //생성일자, 업데이트 일자 세부 분류
     private LocalDateTime update_date; //생성일은 최초 1회만 저장, 그이후 수정시에는 업데이트 일자만 갱신
@@ -23,6 +24,7 @@ public class Schedules {
         this.title = title;
         this.content = content;
         this.userId = userId;
+        //this.userName = userName;
     }
 
 }

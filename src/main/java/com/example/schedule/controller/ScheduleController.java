@@ -51,12 +51,12 @@ public class ScheduleController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id, @RequestParam String pw){
-        try{
-            scService.delete(id, pw);
-        }catch (ResponseStatusException e){
-            log.error(e.getReason());
-        }
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<ScheduleResponseDto> delete(@PathVariable Long id, @RequestParam String pw){
+//        try{
+//            scService.delete(id, pw);
+//        }catch (ResponseStatusException e){
+//            log.error(e.getReason());
+//        }
+        return new ResponseEntity<>(scService.delete(id, pw),HttpStatus.OK);
     }
 }

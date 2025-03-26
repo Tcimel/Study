@@ -60,14 +60,14 @@ public class ScheduleServiceImpl implements ScheduleService{
         if(!user.getPw().equals(dto.getPw())){
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "비밀번호가 일치하지 않습니다.");
         }else{
-            scheduleRepository.update(id,dto.getName(),dto.getContent());
+            scheduleRepository.update(id,dto.getContent());
         }
 
         return new ScheduleResponseDto(sc);
     }
 
     @Override
-    public void delete(Long id, String pw) {
+    public ScheduleResponseDto delete(Long id, String pw) {
         Schedules sc = scheduleRepository.findScheduleById(id);
         Users user = userRepository.findUserById(sc.getUserId());
         if(pw == null || !user.getPw().equals(pw)){
@@ -75,5 +75,6 @@ public class ScheduleServiceImpl implements ScheduleService{
         }else{
             scheduleRepository.delete(id);
         }
+        return new ScheduleResponseDto(sc);
     }
 }
