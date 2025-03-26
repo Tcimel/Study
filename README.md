@@ -9,7 +9,7 @@
 | 일정 생성      | POST   | /api/ch3/schedules           | `{ "title": "스터디 하기", "contents": "Spring 복습", "name": "sun", "pw": "1234", "email": "1234@naver.com" }` | `{ "id": 1, "title": "스터디 하기", "contents": "Spring 복습", "name": "sun", "createDate": "...", "updateDate": "..." }` | 201 Created      |
 | 전체 일정 조회 | GET    | /api/ch3/schedules           | -                                                                                             | `[ { "id": 1, "name": "sun", "title": "스터디 하기", "contents": "내용", "updateDate": "..." } ]` | 200 OK           |
 | 선택 일정 조회 | GET    | /api/ch3/schedules/{id}      | -                                                                                             | `{ "id": 1, "title": "스터디 하기", "contents": "내용", "name": "sun", "updateDate": "..." }`   | 200 OK           |
-| 일정 수정      | PATCH  | /api/ch3/schedules/{id}      | `{ "title": "운동하기", "contents": "필라테스 수업", "name": "sun", "pw": "1234" }`            | `{ "message": "일정이 성공적으로 수정되었습니다." }`                                           | 200 OK           |
+| 일정 수정      | PATCH  | /api/ch3/schedules/{id}      | `{ "contents": "필라테스 수업", "pw": "1234" }`            | `{ "message": "일정이 성공적으로 수정되었습니다." }`                                           | 200 OK           |
 | 일정 삭제      | DELETE | /api/ch3/schedules/{id}      | `{ "pw": "1234" }`                                                                            | `{ "message": "일정이 삭제되었습니다." }`                                                      | 200 OK           |
 
 
